@@ -39,7 +39,8 @@ async def send_doc(client, message):
     await message.reply_text(
         f"__What do you want me to do with this file?__\n**File Name** :- `{filename}`\n**File Size** :- `{filesize}`",
         reply_to_message_id = message.id,
-        reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 𝚁𝙴𝙽𝙰𝙼𝙴",callback_data = "rename")],
+        reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 𝚁𝙴𝙽𝙰𝙼𝙴",callback_data = "rename"),
+                                               InlineKeyboardButton("➡️CONTINUE➡️",callback_data = "refunc")],
         [InlineKeyboardButton("𝙲𝙰𝙽𝙲𝙴𝙻 ✖️",callback_data = "cancel")  ]]))
 
 
